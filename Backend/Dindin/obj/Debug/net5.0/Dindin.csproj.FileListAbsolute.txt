@@ -1,0 +1,12 @@
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\bin\Debug\net5.0\Dindin.deps.json
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\bin\Debug\net5.0\Dindin.dll
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\bin\Debug\net5.0\ref\Dindin.dll
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\bin\Debug\net5.0\Dindin.pdb
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.csproj.AssemblyReference.cache
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.AssemblyInfoInputs.cache
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.AssemblyInfo.cs
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.csproj.CoreCompileInputs.cache
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.dll
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\ref\Dindin.dll
+C:\Users\scarl\OneDrive\Documentos\Área de Trabalho\projetoGIT\Backend\Dindin\obj\Debug\net5.0\Dindin.pdb
