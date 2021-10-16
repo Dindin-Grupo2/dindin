@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view />
+    <section class="grid-container">
+      <router-view />
+    </section>
     <Footer />
   </div>
 </template>
@@ -11,6 +13,7 @@ import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
 
 export default {
+  name: "App",
   components: {
     Footer,
     Navbar,

@@ -44,3 +44,15 @@ h6 {
     font-size: 3.75rem;
   }
 }
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  @media screen and (min-width: 992px) {
+    font-size: 2.1875rem;
+  }
+}
+
+.w-light {
+  font-weight: 300;
+}
