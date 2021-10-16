@@ -1,0 +1,177 @@
+/**
+  * app global scss
+  */
+
+/**
+  * Grid Container
+  * Sizes 12 columns
+  */
+
+$columns: 12;
+$screens: xs, sm, md, lg, xl;
+$sizes: 0, 576, 768, 992, 1200;
+
+:root {
+  --size-xs-min: 0;
+  --size-xs-max: 575px;
+  --size-sm-min: 576px;
+  --size-sm-max: 767px;
+  --size-md-min: 768px;
+  --size-md-max: 991px;
+  --size-lg-min: 992px;
+  --size-lg-max: 1199px;
+  --size-xl-min: 1200px;
+  --size-xl-max: 1399px;
+  --size-xxl-min: 1400px;
+}
+
+.grid {
+  align-content: stretch;
+  display: grid;
+  gap: 0;
+  &:not(.nowrap) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    justify-content: stretch;
+    justify-items: stretch;
+    width: 100%;
+  }
+  &--gutter {
+    &-md {
+      gap: 1rem;
+    }
+  }
+  &.nowrap {
+    grid-auto-flow: column;
+    overflow: auto;
+  }
+  &-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1032px;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+.g-col {
+  min-height: 1px;
+  position: relative;
+  @each $screen in $screens {
+    &-#{$screen} {
+      @if $screen == xl {
+        @media screen and (min-width: 1200px) {
+          @for $i from 1 through $columns {
+            &-#{$i} {
+              grid-column: span $i;
+            }
+          }
+        }
+      }
+      @else if $screen == lg {
+        @media screen and (min-width: 992px) {
+          @for $i from 1 through $columns {
+            &-#{$i} {
+              grid-column: span $i;
+            }
+          }
+        }
+      }
+      @else if $screen == md {
+        @media screen and (min-width: 768px) {
+          @for $i from 1 through $columns {
+            &-#{$i} {
+              grid-column: span $i;
+            }
+          }
+        }
+      }
+      @else if $screen == sm {
+        @media screen and (min-width: 576px) {
+          @for $i from 1 through $columns {
+            &-#{$i} {
+              grid-column: span $i;
+            }
+          }
+        }
+      }
+      @else {
+        @for $i from 1 through $columns {
+          &-#{$i} {
+            grid-column: span $i;
+          }
+        }
+      }
+    }
+  }
+  &-24 {
+    width: 24vw;
+    &:last-of-type {
+      .slider & {
+        padding-right: 1rem;
+        width: calc(24vw + 1rem);
+      }
+    }
+  }
+  &-30 {
+    width: 30vw;
+    &:last-of-type {
+      .slider & {
+        padding-right: 1rem;
+        width: calc(30vw + 1rem);
+      }
+    }
+  }
+  &-40 {
+    width: 40vw;
+    &:last-of-type {
+      .slider & {
+        padding-right: 1rem;
+        width: calc(40vw + 1rem);
+      }
+    }
+  }
+  &-55 {
+    width: 55vw;
+    &:last-of-type {
+      .slider & {
+        padding-right: 1rem;
+        width: calc(55vw + 1rem);
+      }
+    }
+  }
+  &-max{
+    &-200 {
+      max-width: 200px;
+      &:last-of-type {
+        .slider & {
+          max-width: calc(200px + 1rem);
+        }
+      }
+    }
+    &-250 {
+      max-width: 250px;
+      &:last-of-type {
+        .slider & {
+          max-width: calc(250px + 1rem);
+        }
+      }
+    }
+  }
+}
+.gap {
+  &-xs {
+    gap: 4px;
+  }
+  &-sm {
+    gap: 8px;
+  }
+  &-md {
+    gap: 16px;
+  }
+  &-lg {
+    gap: 32px;
+  }
+}
