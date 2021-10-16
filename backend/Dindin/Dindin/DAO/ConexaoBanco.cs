@@ -6,6 +6,7 @@ namespace Dindin.DAO
 {
     public class ConexaoBanco
     {
+        // info do banco
         static string connectionString = "datasource=;port=;username=;password=;database=;SslMode=none";
         
         static MySqlConnection conn = new MySqlConnection(connectionString);
