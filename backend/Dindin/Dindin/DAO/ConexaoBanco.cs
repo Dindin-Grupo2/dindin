@@ -7,12 +7,14 @@ namespace Dindin.DAO
     public class ConexaoBanco
     {
         // info do banco
-        static string connectionString = "datasource=;port=;username=;password=;database=;SslMode=none";
-        
+        static string connectionString = "datasource=;port=;username=;password=;database=dindindb;SslMode=none";        
         static MySqlConnection conn = new MySqlConnection(connectionString);
-
+       
         static public int? executaComando(string sql, bool queroID)
         {
+            MySqlTransaction transaction = null;
+            transaction = conn.BeginTransaction();
+
             int ID = 0;
 
             if (conn.State != ConnectionState.Open)
@@ -23,6 +25,7 @@ namespace Dindin.DAO
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Transaction = transaction;
                 cmd.ExecuteNonQuery();
 
                 if (queroID)
@@ -31,9 +34,12 @@ namespace Dindin.DAO
                     ID = Convert.ToInt32(cmd.Parameters["@ultimoId"].Value);
                     return ID;
                 }
+
+                transaction.Commit();
             }
             catch (System.Exception ex)
             {
+                transaction.Rollback();
                 throw;
             }
             finally

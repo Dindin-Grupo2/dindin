@@ -20,7 +20,7 @@ namespace Dindin.Classes
 
                 foreach (var aula in listaAula)
                 {
-                    ConexaoBanco.executaComando($"INSERT INTO aula (id_curso_fk, titulo, link, descricao) values ({idFK}, '{aula.retornaTitulo()}', '{aula.retornaLink()}','{aula.retornaDescricao()}')", false);
+                    ConexaoBanco.executaComando($"INSERT INTO aula (titulo, link, descricao, id_curso) VALUES ('{aula.retornaTitulo()}', '{aula.retornaLink()}','{aula.retornaDescricao()}', {idFK})", false);
                 }
 
                 return true;
@@ -31,23 +31,23 @@ namespace Dindin.Classes
             }
         }
 
-        public bool Atualizar(string titulo, Curso curso, List<Aula> listaAula)
+        public bool Atualizar(int id, Curso curso, List<Aula> listaAula)
         {
             try
             {
-                DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.titulo = '{titulo}'");
+                DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.idcurso = {id}");
                 int idFKAula = 0;
 
                 if (dt.Rows.Count > 0)
                 {
-                    idFKAula = Convert.ToInt32($"{dt.Rows[0]["id_curso"]}");
+                    idFKAula = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
 
                     ConexaoBanco.executaComando(@$"UPDATE curso 
                                            SET titulo = '{curso.retornaTitulo()}',
                                            capa = '{curso.retornaCapa()}',
                                            nome_professor = '{curso.retornaNomeProfessor()}',
                                            descricao = '{curso.retornaDescricao()}'
-                                           WHERE titulo = '{titulo}'", false);
+                                           WHERE idcurso = {id}", false);
 
                     foreach (var aula in listaAula)
                     {
@@ -55,7 +55,7 @@ namespace Dindin.Classes
                                            SET titulo = '{aula.retornaTitulo()}',
                                            link = '{aula.retornaLink()}',
                                            descricao = '{aula.retornaDescricao()}'
-                                           WHERE id_curso_fk = {idFKAula} AND titulo = '{aula.retornaTitulo()}'" , false);
+                                           WHERE id_curso = {idFKAula} AND titulo = '{aula.retornaTitulo()}'" , false);
                     }
                 }
                 return true;
@@ -66,18 +66,18 @@ namespace Dindin.Classes
             }
         }
 
-        public bool Excluir(string titulo)
+        public bool Excluir(int id)
         {
             try
             {
-                DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.titulo = '{titulo}'");
+                DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.idcurso = {id}");
                 int idFKAula = 0;
 
                 if (dt.Rows.Count > 0)
                 {
-                    idFKAula = Convert.ToInt32($"{dt.Rows[0]["id_curso"]}");
-                    ConexaoBanco.executaComando($"DELETE FROM curso WHERE curso.titulo = '{titulo}'", false);
-                    ConexaoBanco.executaComando($"DELETE FROM aula WHERE aula.id_curso_fk ='{idFKAula}' AND titulo = '{aula.retornaTitulo()}'", false);
+                    idFKAula = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
+                    ConexaoBanco.executaComando($"DELETE FROM curso WHERE WHERE curso.idcurso = {id}", false);
+                    ConexaoBanco.executaComando($"DELETE FROM aula WHERE aula.id_curso ='{idFKAula}' AND titulo = '{aula.retornaTitulo()}'", false);
                 }
                 return true;
             }
@@ -97,11 +97,12 @@ namespace Dindin.Classes
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
+                    int idCurso = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
                     string titulo = $"{dt.Rows[i]["titulo"]}";
                     string capa = $"{dt.Rows[i]["capa"]}";
                     string nomeProfessor = $"{dt.Rows[i]["nome_professor"]}";
                     string descricao = $"{dt.Rows[i]["descricao"]}";
-                    curso = new Curso(titulo, capa, nomeProfessor, descricao);
+                    curso = new Curso(idCurso, titulo, capa, nomeProfessor, descricao);
 
                     listaCurso.Add(curso);
                 }
@@ -113,17 +114,18 @@ namespace Dindin.Classes
             return listaCurso;
         }
 
-        public Curso RetornaPorTituloCurso(string titulo)
+        public Curso RetornaPorIDCurso(int id)
         {
-            DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.titulo= '{titulo}'");
+            DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.idcurso = {id}");
 
             if (dt.Rows.Count > 0)
             {
+                int idCurso = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
                 string tituloCurso = $"{dt.Rows[0]["titulo"]}";
                 string capa = $"{dt.Rows[0]["capa"]}";
                 string nomeProfessor = $"{dt.Rows[0]["nome_professor"]}";
                 string descricaoCurso = $"{dt.Rows[0]["descricao"]}";
-                this.curso = new Curso(tituloCurso, capa, nomeProfessor, descricaoCurso);
+                this.curso = new Curso(idCurso, tituloCurso, capa, nomeProfessor, descricaoCurso);
             }
             else
             {
@@ -132,15 +134,15 @@ namespace Dindin.Classes
             return this.curso;
         }
 
-        public List<Aula> RetornaPorTituloAula(string titulo)
+        public List<Aula> RetornaPorIDAula(int id)
         {
             List<Aula> listaAula = new List<Aula>();
-            DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.titulo= '{titulo}'");
+            DataTable dt = ConexaoBanco.retornaDados($"SELECT * FROM curso WHERE curso.idcurso = {id}");
 
             if (dt.Rows.Count > 0)
             {
-                int idFKAula = Convert.ToInt32($"{dt.Rows[0]["id_curso"]}");
-                DataTable dtAula = ConexaoBanco.retornaDados($"SELECT * FROM aula WHERE aula.id_curso_fk = {idFKAula}");
+                int idFKAula = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
+                DataTable dtAula = ConexaoBanco.retornaDados($"SELECT * FROM aula WHERE aula.id_curso = {idFKAula}");
 
                 if (dtAula.Rows.Count > 0)
                 {
