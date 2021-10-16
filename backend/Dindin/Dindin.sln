@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindin", "Dindin\Dindin.csproj", "{FF1969EE-7836-4739-989A-232FDAE7FC80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindin.Web", "Dindin.Web\Dindin.Web.csproj", "{6BB07A08-99AA-40A4-A20F-624E04C2DE88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF1969EE-7836-4739-989A-232FDAE7FC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1969EE-7836-4739-989A-232FDAE7FC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1969EE-7836-4739-989A-232FDAE7FC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1969EE-7836-4739-989A-232FDAE7FC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB07A08-99AA-40A4-A20F-624E04C2DE88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB07A08-99AA-40A4-A20F-624E04C2DE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB07A08-99AA-40A4-A20F-624E04C2DE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB07A08-99AA-40A4-A20F-624E04C2DE88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA48CA8C-BB69-4C2C-A36B-80B26840061F}
+	EndGlobalSection
+EndGlobal
