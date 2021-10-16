@@ -9,15 +9,13 @@ namespace Dindin.Model
         private string Capa { get; set; }
         private string NomeProfessor { get; set; }
         private string Descricao { get; set; }
-        public Aula Aula { get; set; }
 
-        public Curso(string titulo, string capa, string nomeProfessor, string descricao, Aula aula)
+        public Curso(string titulo, string capa, string nomeProfessor, string descricao)
         {
             this.Titulo = titulo.ValidarStringVazia();
             this.Capa = capa.ValidarStringVazia();
             this.NomeProfessor = nomeProfessor.ValidarStringVazia();
             this.Descricao = descricao.ValidarStringVazia();
-            this.Aula = aula ?? throw new Exception("O objeto aula deve ser informado");
         }
 
         public string retornaTitulo()
