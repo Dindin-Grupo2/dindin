@@ -6,8 +6,8 @@ namespace Dindin.DAO
 {
     public class ConexaoBanco
     {
-        //static string connectionString = "datasource=;port=;username=;password=;database=;SslMode=none";
-        static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=cursoprojeto;SslMode=none";
+        static string connectionString = "datasource=;port=;username=;password=;database=;SslMode=none";
+        
         static MySqlConnection conn = new MySqlConnection(connectionString);
 
         static public int? executaComando(string sql, bool queroID)
