@@ -97,11 +97,11 @@ namespace Dindin.Classes
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    string nome = $"{dt.Rows[i]["titulo"]}";
-                    string titulo = $"{dt.Rows[i]["capa"]}";
+                    string titulo = $"{dt.Rows[i]["titulo"]}";
+                    string capa = $"{dt.Rows[i]["capa"]}";
                     string nomeProfessor = $"{dt.Rows[i]["nome_professor"]}";
                     string descricao = $"{dt.Rows[i]["descricao"]}";
-                    curso = new Curso(nome, titulo, nomeProfessor, descricao);
+                    curso = new Curso(titulo, capa, nomeProfessor, descricao);
 
                     listaCurso.Add(curso);
                 }
