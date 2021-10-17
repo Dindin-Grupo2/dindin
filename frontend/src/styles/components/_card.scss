@@ -1,0 +1,29 @@
+.card {
+  border-radius: 3px;
+  overflow: hidden;
+  &__top {}
+  &__fotter {}
+  &__main {
+    position: relative;
+    &>*{
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      background: transparent;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: all .3s;
+      width: 100%;
+      z-index: 1;
+    }
+    &:hover {
+      &:before {
+        background: var(--q-color-light-smooth);
+      }
+    }
+  }
+}

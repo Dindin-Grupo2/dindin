@@ -1,0 +1,58 @@
+:root {
+  font-size: 16px;
+}
+
+body {
+  color: var(--color-black);
+  font-family: "Ubuntu", Verdana, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+}
+
+.text-spacing {
+  letter-spacing: 0.01rem;
+}
+
+.l-height {
+  &-xs {
+    line-height: 1.1;
+  }
+  &-sm {
+    line-height: 1.2;
+  }
+  &-md {
+    line-height: 1.3;
+  }
+  &-lg {
+    line-height: 1.4;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  @media screen and (min-width: 992px) {
+    font-size: 3.75rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  @media screen and (min-width: 992px) {
+    font-size: 2.1875rem;
+  }
+}
+
+.w-light {
+  font-weight: 300;
+}

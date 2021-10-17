@@ -1,0 +1,89 @@
+.block {
+  display: block;
+}
+.border {
+  border-style: solid;
+  border-width: 1px;
+}
+.flex-1 {
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+.flex-col {
+  flex-flow: column;
+}
+.hidden {
+  display: none;
+  &-sm {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  &-lg {
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+}
+.hover {
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+.l-height {
+  &-xxs {
+    line-height: 1;
+  }
+  &-xs {
+    line-height: 1.1;
+  }
+  &-sm {
+    line-height: 1.2;
+  }
+  &-md {
+    line-height: 1.3;
+  }
+  &-lg {
+    line-height: 1.4;
+  }
+  &-xl {
+    line-height: 1.5;
+  }
+}
+.max-full {
+  max-width: 100%;
+}
+.no-border {
+  &-bottom {
+    border-bottom: 0 !important;
+  }
+  &-left {
+    border-left: 0 !important;
+  }
+}
+.radius {
+  &-full {
+    border-radius: 50%;
+  }
+}
+.static {
+  position: sticky;
+  &--bottom {
+    bottom: 0;
+  }
+}
+.static--button {
+  bottom: 55px;
+  z-index: 5;
+}
+.static-top {
+  top: 0px;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

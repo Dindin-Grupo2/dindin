@@ -1,0 +1,8 @@
+.page {
+  padding-bottom: 32px;
+  padding-top: 32px;
+  @media screen and (min-width: 992px) {
+    padding-bottom: 82px;
+    padding-top: 82px;
+  }
+}
