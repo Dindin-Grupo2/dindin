@@ -8,7 +8,7 @@
         :key="post.idcurso"
         class="grid gap-xl"
       >
-        <CourseItem :item="post" />
+        <Course :course="post" />
         <hr v-if="index < posts.length - 1" />
       </div>
     </main>
@@ -17,12 +17,12 @@
 
 <script>
 import { mapState } from "vuex";
-import CourseItem from "@/components/CourseItem.vue";
+import Course from "@/components/Course.vue";
 
 export default {
   name: "Courses",
   components: {
-    CourseItem,
+    Course,
   },
   data() {
     return {};
@@ -30,8 +30,9 @@ export default {
   computed: {
     ...mapState({ courses: (state) => state.courses }),
     posts() {
-      if (!this.courses || !this.courses.length || this.courses.length <= 0)
+      if (!this.courses || !this.courses.length || this.courses.length <= 0) {
         return [];
+      }
       const posts = this.courses && this.courses.length ? this.courses : [];
       return posts.length ? posts : [];
     },

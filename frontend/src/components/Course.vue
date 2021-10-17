@@ -1,16 +1,16 @@
 <template>
   <article class="grid grid-cols gap-xl">
     <div class="g-col g-col-xs-12 g-col-md-4">
-      <img alt="img" :src="`images/${item.capa}`" />
+      <img alt="img" :src="`images/${course.capa}`" />
     </div>
     <div class="grid gap-xl g-col g-col-xs-12 g-col-md-8">
-      <h2 class="subtitle text-secondary">{{ item.titulo }}</h2>
+      <h2 class="subtitle text-secondary">{{ course.titulo }}</h2>
       <p class="w-light">
-        {{ item.descricao }}
+        {{ course.descricao }}
       </p>
       <div>
         <router-link
-          to="/"
+          :to="`/curso?id=${course.idcurso}`"
           class="button bg-primary button--lg button-radius button-p--lg"
           >começar agora</router-link
         >
@@ -21,9 +21,9 @@
 
 <script>
 export default {
-  name: "CourseItem",
+  name: "Course",
   props: {
-    item: {
+    course: {
       required: true,
     },
   },

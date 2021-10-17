@@ -42,19 +42,3 @@ export default new Vuex.Store({
     },
   },
 });
-
-/* create table curso(
-idcurso int not null primary key auto_increment,
-titulo VARCHAR(150) NOT NULL,
-capa VARCHAR(2048) NULL,
-nome_professor VARCHAR(190) NOT NULL,
-descricao VARCHAR(500) NOT NULL
-)Engine=InnoDB;
-
-create table aula(
-idaula int not null primary key auto_increment,
-titulo VARCHAR(150) NOT NULL,
-link VARCHAR(2048) NOT NULL,
-descricao VARCHAR(500) NOT NULL,
-id_curso INT NOT NULL
-)Engine=InnoDB; */

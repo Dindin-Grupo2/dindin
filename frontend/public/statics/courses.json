@@ -1,23 +1,83 @@
 [
   {
-    "idcurso": 1,
+    "idcurso": "1",
     "titulo": "Investimentos para iniciantes",
     "capa": "temp-foto-curso-1.jpg",
     "nome_professor": "",
-    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis."
+    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis.",
+    "aulas": [
+      {
+        "idaula": "1",
+        "titulo": "Why Is The Market Drifting With No Narrative",
+        "link": "https://youtu.be/1XuLRRIkN-o",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "2",
+        "titulo": "Why Did Equity Indices Pull Back In The Recent Sessions?",
+        "link": "https://youtu.be/ihLvSnQKlr8",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "3",
+        "titulo": "Updates From The United Nation's 76th General Assembly",
+        "link": "https://youtu.be/0i70ms-oGB4",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    ]
   },
   {
-    "idcurso": 2,
+    "idcurso": "2",
     "titulo": "Poupando e Rendendo",
     "capa": "temp-foto-curso-2.jpg",
     "nome_professor": "",
-    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit"
+    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    "aulas": [
+      {
+        "idaula": "1",
+        "titulo": "Why Is The Market Drifting With No Narrative",
+        "link": "https://youtu.be/1XuLRRIkN-o",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "2",
+        "titulo": "Why Did Equity Indices Pull Back In The Recent Sessions?",
+        "link": "https://youtu.be/ihLvSnQKlr8",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "3",
+        "titulo": "Updates From The United Nation's 76th General Assembly",
+        "link": "https://youtu.be/0i70ms-oGB4",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    ]
   },
   {
-    "idcurso": 3,
+    "idcurso": "3",
     "titulo": "Independência Financeira",
     "capa": "temp-foto-curso-3.jpg",
     "nome_professor": "",
-    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur"
+    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur.",
+    "aulas": [
+      {
+        "idaula": "1",
+        "titulo": "Why Is The Market Drifting With No Narrative",
+        "link": "https://youtu.be/1XuLRRIkN-o",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "2",
+        "titulo": "Why Did Equity Indices Pull Back In The Recent Sessions",
+        "link": "https://youtu.be/ihLvSnQKlr8",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "3",
+        "titulo": "Updates From The United Nation's 76th General Assembly",
+        "link": "https://youtu.be/0i70ms-oGB4",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    ]
   }
 ]
