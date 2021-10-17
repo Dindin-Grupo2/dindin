@@ -1,5 +1,4 @@
 ﻿using Dindin.DAO;
-using Dindin.Interface;
 using Dindin.Model;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,6 @@ namespace Dindin.Classes
     public class CursoRepositorio
     {
         private Curso curso;
-        private Aula aula;
 
         public bool Inserir(Curso curso, List<Aula> listaAula)
         {
@@ -55,7 +53,7 @@ namespace Dindin.Classes
                                            SET titulo = '{aula.retornaTitulo()}',
                                            link = '{aula.retornaLink()}',
                                            descricao = '{aula.retornaDescricao()}'
-                                           WHERE id_curso = {idFKAula} AND titulo = '{aula.retornaTitulo()}'" , false);
+                                           WHERE id_curso = {idFKAula}" , false);
                     }
                 }
                 return true;
@@ -76,8 +74,8 @@ namespace Dindin.Classes
                 if (dt.Rows.Count > 0)
                 {
                     idFKAula = Convert.ToInt32($"{dt.Rows[0]["idcurso"]}");
-                    ConexaoBanco.executaComando($"DELETE FROM curso WHERE WHERE curso.idcurso = {id}", false);
-                    ConexaoBanco.executaComando($"DELETE FROM aula WHERE aula.id_curso ='{idFKAula}' AND titulo = '{aula.retornaTitulo()}'", false);
+                    ConexaoBanco.executaComando($"DELETE FROM aula WHERE aula.id_curso = {idFKAula}", false);
+                    ConexaoBanco.executaComando($"DELETE FROM curso WHERE curso.idcurso = {id}", false);                   
                 }
                 return true;
             }
@@ -146,11 +144,11 @@ namespace Dindin.Classes
 
                 if (dtAula.Rows.Count > 0)
                 {
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    for (int i = 0; i < dtAula.Rows.Count; i++)
                     {
-                        string tituloAula = $"{dtAula.Rows[0]["titulo"]}";
-                        string link = $"{dtAula.Rows[0]["link"]}";
-                        string descricaoAula = $"{dtAula.Rows[0]["descricao"]}";
+                        string tituloAula = $"{dtAula.Rows[i]["titulo"]}";
+                        string link = $"{dtAula.Rows[i]["link"]}";
+                        string descricaoAula = $"{dtAula.Rows[i]["descricao"]}";
                         listaAula.Add(new Aula(tituloAula, link, descricaoAula));
                     }
                 }
