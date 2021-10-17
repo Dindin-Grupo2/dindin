@@ -2,13 +2,21 @@
   <section class="page">
     <h1 class="title text-secondary">Cursos</h1>
     <p class="text-dark">Educação financeira é tudo de bom.</p>
-    <main>
-      <CourseItem v-for="(item, index) in res" :key="index" :item="item" />
+    <main class="grid gap-xl m-t-xl">
+      <div
+        v-for="(post, index) in posts"
+        :key="post.idcurso"
+        class="grid gap-xl"
+      >
+        <CourseItem :item="post" />
+        <hr v-if="index < posts.length - 1" />
+      </div>
     </main>
   </section>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import CourseItem from "@/components/CourseItem.vue";
 
 export default {
@@ -17,34 +25,16 @@ export default {
     CourseItem,
   },
   data() {
-    return {
-      res: [
-        {
-          idcurso: 1,
-          titulo: "Investimentos para iniciantes",
-          capa: "temp-foto-curso-1.jpg",
-          nome_professor: "",
-          descricao:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis.",
-        },
-        {
-          idcurso: 2,
-          titulo: "Poupando e Rendendo",
-          capa: "temp-foto-curso-2.jpg",
-          nome_professor: "",
-          descricao:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit",
-        },
-        {
-          idcurso: 3,
-          titulo: "Independência Financeira",
-          capa: "temp-foto-curso-3.jpg",
-          nome_professor: "",
-          descricao:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur",
-        },
-      ],
-    };
+    return {};
+  },
+  computed: {
+    ...mapState({ courses: (state) => state.courses }),
+    posts() {
+      if (!this.courses || !this.courses.length || this.courses.length <= 0)
+        return [];
+      const posts = this.courses && this.courses.length ? this.courses : [];
+      return posts.length ? posts : [];
+    },
   },
 };
 </script>
