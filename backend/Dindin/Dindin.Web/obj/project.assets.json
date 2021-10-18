@@ -132,6 +132,24 @@
           "lib/net5.0/Zstandard.Net.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/106.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/5.6.3": {
         "type": "package",
         "dependencies": {
@@ -589,6 +607,49 @@
         "mysql.data.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "RestSharp/106.12.0": {
+      "sha512": "irOsQHe5nTJB0BKxGQnTX1dsgCPl5dLTxvL7gbl98JiFPiHMN4wpFyUG/66ZpaFCsIrPKh6XwozWXlwYe9JwYQ==",
+      "type": "package",
+      "path": "restsharp/106.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.12.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
     "Swashbuckle.AspNetCore/5.6.3": {
       "sha512": "UkL9GU0mfaA+7RwYjEaBFvAzL8qNQhNqAeV5uaWUu/Z+fVgvK9FHkGCpTXBqSQeIHuZaIElzxnLDdIqGzuCnVg==",
       "type": "package",
@@ -1035,6 +1096,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Dindin >= 1.0.0",
+      "Newtonsoft.Json >= 13.0.1",
+      "RestSharp >= 106.12.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -1044,11 +1107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
+      "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
       "projectName": "Dindin.Web",
-      "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
+      "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
       "packagesPath": "C:\\Users\\scarl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\obj\\",
+      "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\scarl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1065,8 +1128,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
-              "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj"
+            "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
+              "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj"
             }
           }
         }
@@ -1081,6 +1144,14 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.12.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"

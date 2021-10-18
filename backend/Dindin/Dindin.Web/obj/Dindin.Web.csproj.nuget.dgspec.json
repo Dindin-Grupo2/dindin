@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj": {}
+    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj": {
+    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
+        "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
         "projectName": "Dindin.Web",
-        "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
+        "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\Dindin.Web.csproj",
         "packagesPath": "C:\\Users\\scarl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin.Web\\obj\\",
+        "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\scarl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
-                "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj"
+              "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
+                "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj"
               }
             }
           }
@@ -44,6 +44,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.12.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -71,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
+    "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj",
+        "projectUniqueName": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj",
         "projectName": "Dindin",
-        "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj",
+        "projectPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\Dindin.csproj",
         "packagesPath": "C:\\Users\\scarl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Nova pasta\\dindin\\backend\\Dindin\\Dindin\\obj\\",
+        "outputPath": "C:\\Users\\scarl\\OneDrive\\Documentos\\Área de Trabalho\\Projeto Ânima\\dindin\\backend\\Dindin\\Dindin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\scarl\\AppData\\Roaming\\NuGet\\NuGet.Config",
