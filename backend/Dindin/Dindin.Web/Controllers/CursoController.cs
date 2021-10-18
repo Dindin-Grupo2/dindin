@@ -54,7 +54,7 @@ namespace Dindin.Web.Controllers
         }     
 
         [HttpGet("AulasDoCurso/{id}")]
-        public IActionResult CreateAulaByCursoTitulo(int id)
+        public IActionResult GetAulasByCursoID(int id)
         {
             List<Aula> verificaLista = _repositorio.GetAulasByCursoID(id);
 
@@ -76,7 +76,7 @@ namespace Dindin.Web.Controllers
                 this.modelCuso.Descricao = data.descricao;
                 bool result = _repositorio.CreateCurso(modelCuso.ToCurso());
 
-                if (result) return Ok($"Curso cadastrado com sucesso.");
+                if (result) return Created("", null);
                 else return NotFound($"Curso não foi cadastrado.");
             }
             return BadRequest("Request inválido");
@@ -99,7 +99,7 @@ namespace Dindin.Web.Controllers
                 }
                 bool result = _repositorio.CreateAulaByCursoTitulo(newTitulo, listModel);
 
-                if (result) return Ok($"Aula cadastrada com sucesso.");
+                if (result) return Created("", null);
                 else return NotFound($"Aula não foi cadastrada.");
             }
             return BadRequest("Request inválido");
