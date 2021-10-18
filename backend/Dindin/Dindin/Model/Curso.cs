@@ -15,9 +15,14 @@ namespace Dindin.Model
         {
             this.ID = id;
             this.Titulo = titulo.ValidarStringVazia();
-            this.Capa = capa.ValidarStringVazia();
+            this.Capa = capa;
             this.NomeProfessor = nomeProfessor.ValidarStringVazia();
             this.Descricao = descricao.ValidarStringVazia();
+        }
+
+        public int retornaID()
+        {
+            return this.ID;
         }
 
         public string retornaTitulo()
