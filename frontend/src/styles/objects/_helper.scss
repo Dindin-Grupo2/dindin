@@ -71,21 +71,24 @@
         margin-top: 6rem;
       }
     }
+    &-mob {
+      @media screen and (max-width: 991px) {
+        margin-top: 0.5rem;
+      }
+    }
   }
-  &-xs {
-    line-height: 1.1;
-  }
-  &-sm {
-    line-height: 1.2;
-  }
-  &-md {
-    line-height: 1.3;
-  }
-  &-lg {
-    line-height: 1.4;
-  }
-  &-xl {
-    line-height: 1.5;
+  &-l {
+    &-xs {
+      margin-left: 0.5rem;
+      @media screen and (min-width: 992px) {
+        margin-left: 1rem;
+      }
+    }
+    &-desk {
+      @media screen and (min-width: 992px) {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 .max-full {

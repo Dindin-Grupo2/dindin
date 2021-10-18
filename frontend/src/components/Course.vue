@@ -10,7 +10,7 @@
       </p>
       <div>
         <router-link
-          :to="`/curso?id=${course.idcurso}`"
+          :to="`/course?id=${course.idcurso}`"
           class="button bg-primary button--lg button-radius button-p--lg"
           >começar agora</router-link
         >

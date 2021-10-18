@@ -17,10 +17,15 @@ const routes = [
       import(/* webpackChunkName: "backoffice" */ "../views/Backoffice.vue"),
   },
   {
-    path: "/curso",
+    path: "/course",
     name: "Course",
     component: () =>
       import(/* webpackChunkName: "course" */ "../views/Course.vue"),
+  },
+  {
+    path: "/form",
+    name: "Form",
+    component: () => import(/* webpackChunkName: "form" */ "../views/Form.vue"),
   },
 ];
 
