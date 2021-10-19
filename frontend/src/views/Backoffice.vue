@@ -4,7 +4,7 @@
     <p class="text-dark">Educação financeira é tudo de bom.</p>
     <main class="grid gap-xl m-t-xl">
       <table class="table">
-        <thead>
+        <thead class="bg-light">
           <tr>
             <th><span class="text-dark w-bold">Cursos</span></th>
             <th><span class="text-dark w-bold">Ações</span></th>

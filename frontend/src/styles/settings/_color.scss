@@ -1,10 +1,11 @@
 :root {
   --color-primary: #2e948a;
   --color-secondary: #ff4081;
-  --color-light: #aeaeae;
+  --color-light: #e9e9e9;
   --color-dark: #555555;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-gray: #9a9a9a;
   --color-negative: #f8513a;
   --color-warning: #f8c23a;
   --color-positive: #00c767;
@@ -31,6 +32,9 @@
   }
   &-black {
     background-color: var(--color-black);
+  }
+  &-light {
+    background-color: var(--color-light);
   }
 }
 

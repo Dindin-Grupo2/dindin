@@ -1,0 +1,47 @@
+.form {
+  &-field {
+    background: var(--color-white);
+    border: 1px solid Var(--color-gray);
+    border-radius: 0;
+    color: var(--color-black);
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    width: 100%;
+  }
+  textarea {
+    overflow: hidden;
+    resize: none;
+    padding-top: 10px;
+    min-height: 140px;
+  }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: var(--color-gray);
+  }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: var(--color-gray);
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholde {
+    color: var(--color-gray);
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: var(--color-gray);
+  }
+  input:focus-visible,
+  textarea:focus-visible {
+    border-color: var(--color-dark);
+    outline: none;
+  }
+  label {
+    color: var(--color-dark);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+}
