@@ -16,6 +16,7 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+- checkout: https://github.com/Dindin-Grupo2/dindin/tree/main/backend/Dindin
 
 - task: NuGetCommand@2
   inputs:
