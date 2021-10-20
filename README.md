@@ -56,11 +56,6 @@ Solução: Dindin.sln
 
 Endpoint para listagem de todos os cursos cadastrados.
 
-Códigos Http de Retorno Possíveis:
-
-- 200 - OK
-- 404 - NotFound
-
 #### Exemplo Retorno:
 
 ```
@@ -80,15 +75,16 @@ Códigos Http de Retorno Possíveis:
   }
 ]
 ```
-
-### 2. GET /api/Curso/{id}
-
-Endpoint para obter um único Curso pelo seu ID
-
+	
 Códigos Http de Retorno Possíveis:
 
 - 200 - OK
-- 404 - NOT FOUND
+- 404 - NotFound
+	
+	
+### 2. GET /api/Curso/{id}
+
+Endpoint para obter um único Curso pelo seu ID
 
 #### Exemplo Retorno:
 
@@ -101,7 +97,13 @@ Códigos Http de Retorno Possíveis:
   "descricao": "Alguma descrição"
 }
 ```
+	
+Códigos Http de Retorno Possíveis:
 
+- 200 - OK
+- 404 - NOT FOUND
+	
+	
 ### 3. GET /api/Curso/AulasDoCurso/{id}
 
 Endpoint para listar todas as aulas referente ao ID de um curso
