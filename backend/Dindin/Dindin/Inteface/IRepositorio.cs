@@ -9,9 +9,9 @@ namespace Dindin.Inteface
         public Curso GetCursoID(int id);
         public List<Aula> GetAulasByCursoID(int id);
         public bool CreateCurso(Curso curso);
-        public bool CreateAulaByCursoTitulo(string titulo, List<Aula> listaAula);
+        public bool CreateAulaByCursoTitulo(string tituloCurso, List<Aula> listaAula);
         public bool UpdateCurso(int id, Curso curso);
-        public bool UpdateAulasByCursoTitulo(string titulo, string nomeAula, List<Aula> listaAula);
+        public bool UpdateAulasByCursoTitulo(int id, string tituloAula, List<Aula> listaAula);
         public bool DeleteCurso(int id);
         public bool DeleteAulaByCursoID(int id, string tituloAula);
     }

@@ -140,26 +140,24 @@ namespace Dindin.Classes
             }
         }
 
-        public bool UpdateAulasByCursoTitulo(string titulo, string nomeAula, List<Aula> listaAula)
+        public bool UpdateAulasByCursoTitulo(int id, string tituloAula, List<Aula> listaAula)
         {
             try
             {
-                DataTable dt = ConexaoBanco.retornaDados($"(SELECT * FROM curso WHERE curso.titulo = '{titulo}')");
+                DataTable dt = ConexaoBanco.retornaDados($"(SELECT * FROM curso WHERE curso.cursoid = '{id}')");
 
                 if (dt.Rows.Count > 0)
                 {
-                    string idFK = $"{dt.Rows[0]["idcurso"]}";
-
                     for (int i = 0; i < listaAula.Count; i++)
                     {
-                        DataTable dtAula = ConexaoBanco.retornaDados($"SELECT * FROM aula WHERE aula.id_curso = {idFK} AND aula.titulo = '{nomeAula}'");
+                        DataTable dtAula = ConexaoBanco.retornaDados($"SELECT * FROM aula WHERE aula.id_curso = {id} AND aula.titulo = '{tituloAula}'");
                        
                         if (dtAula.Rows.Count > 0)
                         {
                             ConexaoBanco.executaComando(@$"UPDATE aula SET titulo = '{listaAula[i].retornaTitulo()}',
                                            link = '{listaAula[i].retornaLink()}',
                                            descricao = '{listaAula[i].retornaDescricao()}'
-                                           WHERE aula.id_curso = {idFK} AND aula.titulo = '{nomeAula}'", false);
+                                           WHERE aula.id_curso = {id} AND aula.titulo = '{tituloAula}'", false);
                         }
                     }
                 }

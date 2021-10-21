@@ -83,9 +83,9 @@ namespace Dindin.Web.Controllers
         }
 
         [HttpPost("AulaDoCurso")]
-        public IActionResult CreateAulaByCursoTitulo(string titulo, [FromBody] List<object> list)
+        public IActionResult CreateAulaByCursoTitulo(string tituloCurso, [FromBody] List<object> list)
         {
-            string newTitulo = Regex.Replace(titulo, "-", " ");
+            string newTitulo = Regex.Replace(tituloCurso, "-", " ");
 
             if (newTitulo != null && list != null)
             {
@@ -124,12 +124,11 @@ namespace Dindin.Web.Controllers
         }
 
         [HttpPut("AulaDoCurso")]
-        public IActionResult UpdateAulasByCursoID(string titulo, string tituloAula, [FromBody] List<object> list)
+        public IActionResult UpdateAulasByCursoID(int id, string tituloAula, [FromBody] List<object> list)
         {
-            string newTitulo = Regex.Replace(titulo, "-", " ");
             string newAula = Regex.Replace(tituloAula, "-", " ");
 
-            if (newTitulo != null && list != null)
+            if (list != null)
             {
                 for (int i = 0; i < list.Count; i++)
                 {
@@ -139,7 +138,7 @@ namespace Dindin.Web.Controllers
                     this.modelAula.Descricao = data.descricao;
                     this.listModel.Add(this.modelAula.ToAula());
                 }
-                bool result = _repositorio.UpdateAulasByCursoTitulo(newTitulo, newAula, listModel);
+                bool result = _repositorio.UpdateAulasByCursoTitulo(id, newAula, listModel);
 
                 if (result) return Ok($"Aula atualizada com sucesso.");
                 else return NotFound($"Aula não encontrada.");
