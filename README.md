@@ -48,8 +48,13 @@ Dindin.Web = Api REST
 
 dindin/backend/Dindin
   
-Solução: Dindin.sln
-
+Solução: Dindin.sln	
+## 	
+	
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=curso&uri=https%3A%2F%2Flocalhost%3A44345%2Fapi%2FCurso)
+	
+## 
+	
 ## 🌍 Endpoints
 
 ### 1. GET /api/Curso
