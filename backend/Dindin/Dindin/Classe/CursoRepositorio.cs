@@ -144,7 +144,7 @@ namespace Dindin.Classes
         {
             try
             {
-                DataTable dt = ConexaoBanco.retornaDados($"(SELECT * FROM curso WHERE curso.cursoid = '{id}')");
+                DataTable dt = ConexaoBanco.retornaDados($"(SELECT * FROM curso WHERE curso.idcurso = {id})");
 
                 if (dt.Rows.Count > 0)
                 {
