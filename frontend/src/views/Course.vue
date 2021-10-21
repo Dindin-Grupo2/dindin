@@ -8,7 +8,8 @@
         </p>
       </div>
       <div class="g-col g-col-xs-12 g-col-md-5">
-        <img alt="img" :src="`images/${course.capa}`" />
+        <img v-if="course.capa" alt="img" :src="`images/${course.capa}`" />
+        <img v-else alt="img-placeholder" src="images/temp-placeholder.jpg" />
       </div>
     </article>
     <section class="grid gap-xl m-t-xl">

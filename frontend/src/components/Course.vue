@@ -1,7 +1,8 @@
 <template>
   <article class="grid grid-cols gap-xl">
     <div class="g-col g-col-xs-12 g-col-md-4">
-      <img alt="img" :src="`images/${course.capa}`" />
+      <img v-if="course.capa" alt="img" :src="`images/${course.capa}`" />
+      <img v-else alt="img-placeholder" src="images/temp-placeholder.jpg" />
     </div>
     <div class="grid gap-xl g-col g-col-xs-12 g-col-md-8">
       <h2 class="subtitle text-secondary">{{ course.titulo }}</h2>
