@@ -31,7 +31,7 @@
               type="text"
               placeholder="Nome do professor"
               id="teacher"
-              v-model="form.professor"
+              v-model="form.nome_professor"
             />
           </div>
           <div class="m-t-xs">
@@ -43,95 +43,46 @@
               v-model="form.descricao"
             ></textarea>
           </div>
-          <div class="m-t-lg">
-            <h2 class="subtitle text-secondary">Aula 1</h2>
-            <div class="m-t-sm">
-              <label for="lesson-title-1">Título</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Título do curso"
-                id="lesson-title-1"
-              />
-            </div>
+          <div
+            class="m-t-lg"
+            v-for="(lesson, index) in form.aulas"
+            :key="index"
+          >
             <div class="m-t-xs">
-              <label for="lesson-link-1">Link</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Insira o link da aula"
-                id="lesson-link-1"
-              />
-            </div>
-            <div class="m-t-xs">
-              <label for="lesson-description-1">Descrição</label>
-              <textarea
-                class="form-field"
-                placeholder="Acrescente uma breve descrição da aula"
-                id="lesson-description-1"
-              ></textarea>
-            </div>
-          </div>
-          <div class="m-t-lg">
-            <h2 class="subtitle text-secondary">Aula 2</h2>
-            <div class="m-t-sm">
-              <label for="lesson-title-2">Título</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Título do curso"
-                id="lesson-title-2"
-              />
-            </div>
-            <div class="m-t-xs">
-              <label for="lesson-link-2">Link</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Insira o link da aula"
-                id="lesson-link-2"
-              />
-            </div>
-            <div class="m-t-xs">
-              <label for="lesson-description-2">Descrição</label>
-              <textarea
-                class="form-field"
-                placeholder="Acrescente uma breve descrição da aula"
-                id="lesson-description-2"
-              ></textarea>
-            </div>
-          </div>
-          <div class="m-t-lg">
-            <h2 class="subtitle text-secondary">Aula 3</h2>
-            <div class="m-t-sm">
-              <label for="lesson-title-3">Título</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Título do curso"
-                id="lesson-title-3"
-              />
-            </div>
-            <div class="m-t-xs">
-              <label for="lesson-link-3">Link</label>
-              <input
-                class="form-field"
-                type="text"
-                placeholder="Insira o link da aula"
-                id="lesson-link-3"
-              />
-            </div>
-            <div class="m-t-xs">
-              <label for="lesson-description-3">Descrição</label>
-              <textarea
-                class="form-field"
-                placeholder="Acrescente uma breve descrição da aula"
-                id="lesson-description-3"
-              ></textarea>
+              <h2 class="subtitle text-secondary">Aula {{ index + 1 }}</h2>
+              <div class="m-t-sm">
+                <label for="lesson-title-1">Título</label>
+                <input
+                  class="form-field"
+                  type="text"
+                  placeholder="Título do curso"
+                  :id="`lesson-title-${index}`"
+                  v-model="lesson.titulo"
+                />
+              </div>
+              <div class="m-t-xs">
+                <label for="lesson-link-1">Link</label>
+                <input
+                  class="form-field"
+                  type="text"
+                  placeholder="Insira o link da aula"
+                  :id="`lesson-link-${index}`"
+                  v-model="lesson.link"
+                />
+              </div>
+              <div class="m-t-xs">
+                <label for="lesson-description-1">Descrição</label>
+                <textarea
+                  class="form-field"
+                  placeholder="Acrescente uma breve descrição da aula"
+                  :id="`lesson-description-${index}`"
+                  v-model="lesson.descricao"
+                ></textarea>
+              </div>
             </div>
           </div>
           <button
-            @click="updateCourses"
+            @click="refreshCourses"
             type="button"
             class="
               button
@@ -164,7 +115,7 @@
 <script>
 import Vue from "vue";
 import Toast from "vue-toastification";
-import { mapState } from "vuex";
+import { mapActions, mapMutations, mapState } from "vuex";
 import "vue-toastification/dist/index.css";
 
 const options = {};
@@ -187,6 +138,7 @@ export default {
         capa: "",
         nomeProfessor: "",
         descricao: "",
+        aulas: [{}, {}, {}],
       };
     },
     course() {
@@ -198,6 +150,7 @@ export default {
         const courses = this.courses && this.courses.length ? this.courses : [];
         const course = courses.find((c) => c.idcurso === id);
         if (!course) {
+          this.getCourse(this.courseData);
           return false;
         }
         this.getCourse(course);
@@ -208,8 +161,12 @@ export default {
     },
   },
   methods: {
+    ...mapMutations({ setCourses: "setCourses" }),
+    ...mapActions({ updateCourses: "updateCourses" }),
     getCourse(data) {
-      this.title = "Editar";
+      if (this.$route.query.id) {
+        this.title = "Editar";
+      }
       this.form = data;
     },
     checkForm() {
@@ -218,12 +175,28 @@ export default {
       }
       return true;
     },
-    updateCourses() {
+    refreshCourses() {
       if (!this.checkForm()) {
         this.$toast("Verifique os campos novamente!");
         return false;
       }
-      return false;
+      const course = this.form;
+      let [post] = this.courses.filter((c) => c.idcurso === course.idcurso);
+      if (post) {
+        this.setCourses(this.courses);
+        return this.$router.replace("/");
+      }
+      course.idcurso = this.uuidv4();
+      this.updateCourses(course);
+      return this.$router.replace("/");
+    },
+    uuidv4() {
+      return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+        (
+          c ^
+          (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+        ).toString(16)
+      );
     },
   },
 };

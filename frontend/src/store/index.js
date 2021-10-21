@@ -19,7 +19,7 @@ export default new Vuex.Store({
         capa: course.capa,
         nome_professor: course.nome_professor,
         descricao: course.descricao,
-        aulas: [],
+        aulas: course.aulas,
       };
       state.courses.push(post);
     },

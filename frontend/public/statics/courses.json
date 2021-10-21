@@ -1,9 +1,9 @@
 [
   {
-    "idcurso": "1",
+    "idcurso": "cd8e1830-9675-4a2d-ac27-2848ed1229ac",
     "titulo": "Investimentos para iniciantes",
     "capa": "temp-foto-curso-1.jpg",
-    "nome_professor": "",
+    "nome_professor": "Sabrina Fernadez",
     "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis.",
     "aulas": [
       {
@@ -27,37 +27,91 @@
     ]
   },
   {
-    "idcurso": "2",
+    "idcurso": "a53b721f-d0b4-4a86-b22c-c0be8dff0bf4",
     "titulo": "Poupando e Rendendo",
     "capa": "temp-foto-curso-2.jpg",
-    "nome_professor": "",
+    "nome_professor": "Vinícius Moreira",
     "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     "aulas": [
       {
         "idaula": "1",
-        "titulo": "Why Is The Market Drifting With No Narrative",
-        "link": "https://youtu.be/1XuLRRIkN-o",
+        "titulo": "Tudo que você precisa saber sobre FUNDOS DE CRÉDITO PRIVADO (renda fixa)",
+        "link": "https://youtu.be/GTgOQ_HwFWE",
         "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
       },
       {
         "idaula": "2",
-        "titulo": "Why Did Equity Indices Pull Back In The Recent Sessions?",
-        "link": "https://youtu.be/ihLvSnQKlr8",
+        "titulo": "3 aplicativos que eu sempre uso no meu dia a dia",
+        "link": "https://youtu.be/6ZetYzzWJ9k",
         "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
       },
       {
         "idaula": "3",
-        "titulo": "Updates From The United Nation's 76th General Assembly",
-        "link": "https://youtu.be/0i70ms-oGB4",
+        "titulo": "Taxa Selic: entenda o que é (além dos investimentos e mercado financeiro)",
+        "link": "https://youtu.be/4qxqdEesblk",
         "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
       }
     ]
   },
   {
-    "idcurso": "3",
+    "idcurso": "b875582d-79f0-4e43-a54f-a7d28dad7cc2",
     "titulo": "Independência Financeira",
     "capa": "temp-foto-curso-3.jpg",
-    "nome_professor": "",
+    "nome_professor": "Roberto Jovem de Antunes",
+    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur.",
+    "aulas": [
+      {
+        "idaula": "1",
+        "titulo": "ALTERNATIVA Para o Planejamento Financeiro Com Passo-a-Passo",
+        "link": "https://youtu.be/qniY0X_1d4A",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "2",
+        "titulo": "Juros de Mora e Multa + O QUE SÃO ENCARGOS no Cartão de Crédito!",
+        "link": "https://youtu.be/c8bVTX39FI0",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "3",
+        "titulo": "Como Fazer Orçamento Para Pagar Dívidas",
+        "link": "https://youtu.be/4InXj5m0-lA",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    ]
+  },
+  {
+    "idcurso": "26d1648a-f44b-4879-a132-9eec04983cfb",
+    "titulo": "Ullam molestiae est quaerat corrupti vitae qui natus",
+    "capa": "temp-foto-curso-1.jpg",
+    "nome_professor": "Fernanda Bezerra",
+    "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur.",
+    "aulas": [
+      {
+        "idaula": "1",
+        "titulo": "APOSENTADO PODE SER MEI? VOU PERDER A MINHA APOSENTADORIA?",
+        "link": "https://youtu.be/bSLr7TZfPTw",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "2",
+        "titulo": "COMO APROVEITAR A BLACK FRIDAY?",
+        "link": "https://youtu.be/yvcKMwBR8m4",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      },
+      {
+        "idaula": "3",
+        "titulo": "COMO FAÇO O FLUXO DE CAIXA DA MINHA EMPRESA?",
+        "link": "https://youtu.be/-V6gm4y21WI",
+        "descricao": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      }
+    ]
+  },
+  {
+    "idcurso": "e7017cf3-9e75-45b9-b5fd-de2c74172816",
+    "titulo": "Dolor sit amet consectetur adipisicing elit",
+    "capa": "temp-foto-curso-2.jpg",
+    "nome_professor": "Clarice de Souza",
     "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur? Eaque numquam provident quis. Ullam molestiae est quaerat corrupti vitae qui natus, soluta dolore illo ato dio saepe perspiciatis excepturi nam tenetur.",
     "aulas": [
       {
