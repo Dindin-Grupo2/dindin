@@ -9,8 +9,8 @@ export default {
             return error
         })
     },
-    putAula(tituloDoCurso, tituloDaAula){
-        return api.UpdateAulasByCursoID(`/api/Curso/AulaDoCurso?titulo=${tituloDoCurso}&tituloAula=${tituloDaAula}`).then(res => {
+    putAula(idCurso, tituloDaAula){
+        return api.UpdateAulasByCursoID(`/api/Curso/AulaDoCurso?curso=${idCurso}&tituloAula=${tituloDaAula}`).then(res => {
             return res
 
         }).catch(error => {
