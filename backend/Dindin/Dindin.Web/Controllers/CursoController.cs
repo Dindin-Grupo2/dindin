@@ -155,9 +155,8 @@ namespace Dindin.Web.Controllers
             else return NotFound($"Curso referente ao id = {id} não encontrado.");
         }
 
-        [HttpDelete("AulaDoCurso/{id}")]
+        [HttpDelete("AulaDoCurso")]
         public IActionResult DeleteAulaByCursoID(int id, string tituloAula)
-        {
             string newTitulo = Regex.Replace(tituloAula, "-", " ");
             bool result = _repositorio.DeleteAulaByCursoID(id, newTitulo);
 
