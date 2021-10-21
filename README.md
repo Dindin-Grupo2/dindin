@@ -49,6 +49,35 @@ Dindin.Web = Api REST
 dindin/backend/Dindin
   
 Solução: Dindin.sln	
+	
+dindin/backend/Dindin/Dindin/DAO/ConexaoBanco.cs
+	
+Atribui os valores na string connectionString:
+	
+static string connectionString = "datasource=;port=3306;username=;password=;database=;SslMode=none";
+
+
+```
+create table curso(
+idcurso int not null primary key auto_increment,
+titulo VARCHAR(150) NOT NULL,
+capa VARCHAR(2048) NULL,
+nome_professor VARCHAR(190) NOT NULL,
+descricao VARCHAR(500) NOT NULL
+)Engine=InnoDB;
+
+create table aula(
+idaula int not null primary key auto_increment,
+titulo VARCHAR(150) NOT NULL,
+link VARCHAR(2048) NOT NULL,
+descricao VARCHAR(500) NOT NULL,
+id_curso INT NOT NULL
+)Engine=InnoDB;
+
+ALTER TABLE aula ADD CONSTRAINT fk_aula FOREIGN KEY ( id_curso) REFERENCES curso ( idcurso ) ;
+	
+```	
+	
 ## 	
 	
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=curso&uri=https%3A%2F%2Flocalhost%3A44345%2Fapi%2FCurso)
