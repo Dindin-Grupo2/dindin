@@ -146,7 +146,7 @@ namespace Dindin.Web.Controllers
             return BadRequest("Request inválido");
         }
 
-        [HttpDelete("AulaDoCurso/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCurso(int id)
         {
             bool result = _repositorio.DeleteCurso(id);
